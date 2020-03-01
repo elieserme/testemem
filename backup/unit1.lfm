@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 431
+  Height = 616
+  Top = 243
+  Width = 1180
+  Caption = 'Form1'
+  ClientHeight = 616
+  ClientWidth = 1180
+  LCLVersion = '2.0.6.0'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 184
+    Top = 8
+    Width = 1160
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'nome'
+        Width = 150
+        FieldName = 'nome'
+      end    
+      item
+        Title.Caption = 'email'
+        Width = 300
+        FieldName = 'email'
+      end    
+      item
+        Title.Caption = 'senha'
+        Width = 600
+        FieldName = 'senha'
+      end>
+    DataSource = DataSource
+    TabOrder = 0
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Height = 35
+    Top = 200
+    Width = 393
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 35
+    ClientWidth = 393
+    DataSource = DataSource
+    Options = []
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 1093
+    Height = 35
+    Top = 200
+    Width = 75
+    Caption = 'Conectar'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 170
+    Top = 254
+    Width = 576
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssVertical
+    TabOrder = 3
+  end
+  object Memo2: TMemo
+    Left = 8
+    Height = 170
+    Top = 432
+    Width = 576
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssVertical
+    TabOrder = 4
+  end
+  object Memo3: TMemo
+    Left = 592
+    Height = 170
+    Top = 254
+    Width = 576
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssVertical
+    TabOrder = 5
+  end
+  object Memo4: TMemo
+    Left = 592
+    Height = 170
+    Top = 432
+    Width = 576
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssVertical
+    TabOrder = 6
+  end
+  object Edit1: TEdit
+    Left = 432
+    Height = 23
+    Top = 212
+    Width = 80
+    TabOrder = 7
+    Text = 'Edit1'
+  end
+  object Label1: TLabel
+    Left = 432
+    Height = 15
+    Top = 197
+    Width = 24
+    Caption = 'total'
+    ParentColor = False
+  end
+  object MemDataset: TMemDataset
+    FieldDefs = <    
+      item
+        Name = 'nome'
+        DataType = ftString
+        Size = 60
+      end    
+      item
+        Name = 'email'
+        DataType = ftString
+        Size = 60
+      end    
+      item
+        Name = 'senha'
+        DataType = ftString
+        Size = 200
+      end>
+    left = 736
+    top = 40
+  end
+  object DataSource: TDataSource
+    DataSet = MemDataset
+    left = 737
+    top = 96
+  end
+end
